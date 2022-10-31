@@ -10,6 +10,16 @@ pendeFormulaCalculation() {
     echo "Your ideal weight should be based Pendes formula: $result kg"
 }
 
+monnerotFormulaCalculation() {
+    result=$((  ( ($2 -100) + (4 * $5) )   / 2  ))
+    echo "Your ideal weight should be based Monnerot formula: $result kg"
+}
+
+bornHardtFormulaCalculation() {
+    result=$(($2 * $4 / 240))
+    echo "Your ideal weight should be based Bornhardt formula: $result kg"
+}
+
 imc1Calculation() {
     result=$(( $2 * $2 * 21,75  ))
     echo "Your ideal weight should be based IMC formula: $result kg"
@@ -44,9 +54,9 @@ case "$response" in
 
         creffFormulaCalculation $1 $2 $3
 
-        monerotFormmulaCalculation $1 $2 $3
+        monnerotFormulaCalculation $1 $2 $3 $4 $5
 
-        bornHartFormulaCalculation $1 $2 $3
+        bornHardtFormulaCalculation $1 $2 $3 $4
 
         imc1Calculation $1 $2 $3
 
@@ -75,7 +85,7 @@ for line in "${array[@]}"
     echo "$line"
   done
 
-  doCalulations ${array[1]} ${array[2]} ${array[3]}
+  doCalulations ${array[1]} ${array[2]} ${array[3]} ${array[4]} ${array[5]} 
 
 # read -p 'To whom do I have the pleasure?: ' name
 
