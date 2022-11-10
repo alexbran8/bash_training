@@ -1,0 +1,15 @@
+BRANCH="master"
+COMMIT="This is my first commit from SH"
+TAG="v1.0.0"
+RELEASE_TYPE="patch"
+DESCRIPTION="this is the latest release. no major fixes"
+DRYRUN="0"
+GITPARAMS=()
+RELEASEDATE=$(date '+%Y%m%d')
+RELEASENOTES=""
+REMOTE="origin"
+PREVIOUS_COMMIT=""
+RUNSILENT="0"
+VERBOSE="0"
+VERSIONTYPE="patch"
+UPDATE_REMOTES="YES"
